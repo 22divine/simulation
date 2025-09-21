@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👁️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Faster+One&family=Nosifer&family=Metal+Mania&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+        
+        body {
+            font-family: 'Metal Mania', cursive;
+            background: #000;
+            overflow: hidden;
+            cursor: none;
+            position: relative;
+            height: 100vh;
+            animation: 
+                bodyWarp 3s ease-in-out infinite,
+                colorStorm 1.5s linear infinite,
+                dimensionShift 8s ease-in-out infinite alternate;
+        }
+        
+        @keyframes bodyWarp {
+            0% { filter: brightness(1) contrast(1) hue-rotate(0deg) saturate(1) blur(0px); }
+            25% { filter: brightness(2) contrast(3) hue-rotate(90deg) saturate(5) blur(1px); }
+            50% { filter: brightness(0.5) contrast(0.5) hue-rotate(180deg) saturate(10) blur(2px); }
+            75% { filter: brightness(3) contrast(2) hue-rotate(270deg) saturate(0.1) blur(0.5px); }
+            100% { filter: brightness(1.5) contrast(1.5) hue-rotate(360deg) saturate(2) blur(0px); }
+        }
+        
+        @keyframes colorStorm {
+            0% { background: radial-gradient(circle at 20% 30%, #ff0080, #8000ff, #00ff80, #ff8000, #0080ff); }
+            20% { background: radial-gradient(circle at 80% 70%, #80ff00, #ff0040, #4000ff, #ff4080, #00ff40); }
+            40% { background: radial-gradient(circle at 50% 10%, #ff4000, #0040ff, #80ff40, #ff8040, #4080ff); }
+            60% { background: radial-gradient(circle at 10% 90%, #4000ff, #ff8000, #00ff40, #ff0040, #8040ff); }
+            80% { background: radial-gradient(circle at 90% 20%, #ff0040, #80ff00, #0080ff, #ff4080, #40ff80); }
+            100% { background: radial-gradient(circle at 20% 30%, #ff0080, #8000ff, #00ff80, #ff8000, #0080ff); }
+        }
+        
+        @keyframes dimensionShift {
+            0% { transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1); }
+            25% { transform: perspective(1000px) rotateX(15deg) rotateY(45deg) scale(1.1); }
+            50% { transform: perspective(1000px) rotateX(-10deg) rotateY(-30deg) scale(0.9); }
+            75% { transform: perspective(1000px) rotateX(20deg) rotateY(60deg) scale(1.2); }
+            100% { transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1); }
+        }
+        
+        .reality-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: screen;
+            animation: layerShift 4s ease-in-out infinite;
+        }
+        
+        @keyframes layerShift {
+            0% { opacity: 0.3; transform: translateX(0) translateY(0) scale(1); }
+            33% { opacity: 0.8; transform: translateX(20px) translateY(-15px) scale(1.1); }
+            66% { opacity: 0.1; transform: translateX(-15px) translateY(25px) scale(0.9); }
+            100% { opacity: 0.3; transform: translateX(0) translateY(0) scale(1); }
+        }
+        
+        .mind-melter {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: repeating-conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                #ff00ff 10deg,
+                transparent 20deg,
+                #00ffff 30deg,
+                transparent 40deg,
+                #ffff00 50deg,
+                transparent 60deg
+            );
+            animation: meltReality 2s linear infinite;
+            opacity: 0.4;
+            mix-blend-mode: multiply;
+        }
+        
+        @keyframes meltReality {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.5); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        .fractal-nightmare {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, transparent 20%, #ff0080 21%, #ff0080 40%, transparent 41%);
+            animation: fractalSpin 1s linear infinite, fractalGrow 3s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        @keyframes fractalSpin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        @keyframes fractalGrow {
+            0% { width: 50px; height: 50px; opacity: 1; }
+            50% { width: 400px; height: 400px; opacity: 0.3; }
+            100% { width: 50px; height: 50px; opacity: 1; }
+        }
+        
+        .text-chaos {
+            position: absolute;
+            font-family: 'Creepster', cursive;
+            font-size: 4rem;
+            color: #fff;
+            animation: textInsanity 0.5s linear infinite;
+            text-shadow: 
+                0 0 10px currentColor,
+                0 0 20px currentColor,
+                0 0 30px currentColor;
+        }
+        
+        @keyframes textInsanity {
+            0% { 
+                transform: scale(1) rotate(0deg); 
+                color: #ff0080; 
+                text-shadow: 0 0 10px #ff0080; 
+            }
+            10% { 
+                transform: scale(1.2) rotate(36deg); 
+                color: #8000ff; 
+                text-shadow: 0 0 20px #8000ff; 
+            }
+            20% { 
+                transform: scale(0.8) rotate(72deg); 
+                color: #00ff80; 
+                text-shadow: 0 0 15px #00ff80; 
+            }
+            30% { 
+                transform: scale(1.5) rotate(108deg); 
+                color: #ff8000; 
+                text-shadow: 0 0 25px #ff8000; 
+            }
+            40% { 
+                transform: scale(0.5) rotate(144deg); 
+                color: #0080ff; 
+                text-shadow: 0 0 30px #0080ff; 
+            }
+            50% { 
+                transform: scale(1.8) rotate(180deg); 
+                color: #ff4080; 
+                text-shadow: 0 0 35px #ff4080; 
+            }
+            60% { 
+                transform: scale(0.3) rotate(216deg); 
+                color: #80ff40; 
+                text-shadow: 0 0 40px #80ff40; 
+            }
+            70% { 
+                transform: scale(2) rotate(252deg); 
+                color: #ff0040; 
+                text-shadow: 0 0 45px #ff0040; 
+            }
+            80% { 
+                transform: scale(0.7) rotate(288deg); 
+                color: #4080ff; 
+                text-shadow: 0 0 50px #4080ff; 
+            }
+            90% { 
+                transform: scale(1.3) rotate(324deg); 
+                color: #ff8040; 
+                text-shadow: 0 0 55px #ff8040; 
+            }
+            100% { 
+                transform: scale(1) rotate(360deg); 
+                color: #ff0080; 
+                text-shadow: 0 0 10px #ff0080; 
+            }
+        }
+        
+        .geometric-madness {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, transparent 30%, #ff00ff 31%, #ff00ff 69%, transparent 70%);
+            animation: geometricChaos 2s ease-in-out infinite;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        
+        @keyframes geometricChaos {
+            0% { 
+                transform: rotate(0deg) scale(1); 
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
+            }
+            25% { 
+                transform: rotate(90deg) scale(2); 
+                clip-path: polygon(0% 0%, 100% 0%, 50% 100%); 
+            }
+            50% { 
+                transform: rotate(180deg) scale(0.5); 
+                clip-path: polygon(0% 0%, 100% 50%, 0% 100%); 
+            }
+            75% { 
+                transform: rotate(270deg) scale(3); 
+                clip-path: polygon(50% 50%, 100% 0%, 100% 100%); 
+            }
+            100% { 
+                transform: rotate(360deg) scale(1); 
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
+            }
+        }
+        
+        .eye-of-madness {
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            background: radial-gradient(ellipse, #ff0000 20%, #000 21%, #000 40%, #fff 41%, #fff 60%, #000 61%);
+            border-radius: 50px;
+            animation: eyeTrack 3s ease-in-out infinite, eyeBlink 1s linear infinite;
+        }
+        
+        @keyframes eyeTrack {
+            0% { transform: translateX(0) translateY(0) scale(1); }
+            25% { transform: translateX(50px) translateY(-30px) scale(1.5); }
+            50% { transform: translateX(-40px) translateY(40px) scale(0.8); }
+            75% { transform: translateX(30px) translateY(-20px) scale(1.2); }
+            100% { transform: translateX(0) translateY(0) scale(1); }
+        }
+        
+        @keyframes eyeBlink {
+            0%, 90%, 100% { height: 40px; }
+            95% { height: 5px; }
+        }
+        
+        .spiral-void {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, 
+                transparent 0%, 
+                #ff0080 10%, 
+                transparent 11%, 
+                #8000ff 20%, 
+                transparent 21%, 
+                #00ff80 30%, 
+                transparent 31%, 
+                #ff8000 40%, 
+                transparent 41%, 
+                #0080ff 50%, 
+                transparent 51%
+            );
+            border-radius: 50%;
+            animation: voidSpin 1s linear infinite, voidPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes voidSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes voidPulse {
+            0% { transform: scale(0.5) translateX(-50%) translateY(-50%); opacity: 0.3; }
+            50% { transform: scale(2) translateX(-25%) translateY(-25%); opacity: 1; }
+            100% { transform: scale(0.5) translateX(-50%) translateY(-50%); opacity: 0.3; }
+        }
+        
+        .reality-glitch {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent 0px,
+                #ff00ff 1px,
+                transparent 2px,
+                #00ffff 3px,
+                transparent 4px
+            );
+            animation: glitchStorm 0.1s linear infinite;
+            mix-blend-mode: overlay;
+            opacity: 0.6;
+        }
+        
+        @keyframes glitchStorm {
+            0% { transform: translateX(0) translateY(0); opacity: 0.6; }
+            10% { transform: translateX(2px) translateY(-1px); opacity: 0.8; }
+            20% { transform: translateX(-1px) translateY(2px); opacity: 0.4; }
+            30% { transform: translateX(3px) translateY(-2px); opacity: 0.9; }
+            40% { transform: translateX(-2px) translateY(1px); opacity: 0.3; }
+            50% { transform: translateX(1px) translateY(-3px); opacity: 0.7; }
+            60% { transform: translateX(-3px) translateY(2px); opacity: 0.5; }
+            70% { transform: translateX(2px) translateY(-1px); opacity: 0.8; }
+            80% { transform: translateX(-1px) translateY(3px); opacity: 0.4; }
+            90% { transform: translateX(1px) translateY(-2px); opacity: 0.6; }
+            100% { transform: translateX(0) translateY(0); opacity: 0.6; }
+        }
+        
+        .dimension-hole {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: conic-gradient(from 0deg, #000, #ff0080, #8000ff, #00ff80, #ff8000, #0080ff, #000);
+            border-radius: 50%;
+            animation: holeWarp 2s ease-in-out infinite;
+            filter: blur(1px);
+        }
+        
+        @keyframes holeWarp {
+            0% { 
+                transform: scale(0.2) rotate(0deg); 
+                filter: blur(1px) brightness(1); 
+            }
+            50% { 
+                transform: scale(1.5) rotate(180deg); 
+                filter: blur(5px) brightness(3); 
+            }
+            100% { 
+                transform: scale(0.2) rotate(360deg); 
+                filter: blur(1px) brightness(1); 
+            }
+        }
+        
+        .cursor-trail {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #ff00ff, transparent);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: trailFade 0.5s ease-out forwards;
+        }
+        
+        @keyframes trailFade {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(3); }
+        }
+        
+        .floating-words {
+            position: absolute;
+            font-family: 'Nosifer', cursive;
+            font-size: 2rem;
+            color: #fff;
+            animation: wordFloat 5s linear infinite;
+            opacity: 0.8;
+        }
+        
+        @keyframes wordFloat {
+            0% { 
+                transform: translateY(100vh) rotate(0deg); 
+                opacity: 0; 
+            }
+            10% { 
+                opacity: 0.8; 
+            }
+            90% { 
+                opacity: 0.8; 
+            }
+            100% { 
+                transform: translateY(-100px) rotate(360deg); 
+                opacity: 0; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reality distortion layers -->
+    <div class="reality-layer"></div>
+    <div class="reality-layer"></div>
+    <div class="reality-layer"></div>
+    
+    <!-- Mind melting background -->
+    <div class="mind-melter"></div>
+    
+    <!-- Reality glitch overlay -->
+    <div class="reality-glitch"></div>
+    
+    <!-- Fractals -->
+    <div class="fractal-nightmare"></div>
+    
+    <!-- Floating chaos text -->
+    <div class="text-chaos" style="top: 10%; left: 20%;">REALITY</div>
+    <div class="text-chaos" style="top: 70%; right: 15%; animation-delay: -0.3s;">ERROR</div>
+    <div class="text-chaos" style="bottom: 20%; left: 10%; animation-delay: -0.7s;">404</div>
+    <div class="text-chaos" style="top: 40%; right: 30%; animation-delay: -1s;">VOID</div>
+    
+    <!-- Geometric madness -->
+    <div class="geometric-madness" style="top: 15%; left: 60%;"></div>
+    <div class="geometric-madness" style="bottom: 30%; right: 20%; animation-delay: -1s;"></div>
+    <div class="geometric-madness" style="top: 60%; left: 15%; animation-delay: -0.5s;"></div>
+    
+    <!-- Eyes everywhere -->
+    <div class="eye-of-madness" style="top: 25%; left: 40%;"></div>
+    <div class="eye-of-madness" style="bottom: 40%; right: 35%; animation-delay: -1.5s;"></div>
+    <div class="eye-of-madness" style="top: 80%; left: 70%; animation-delay: -0.8s;"></div>
+    <div class="eye-of-madness" style="top: 5%; right: 10%; animation-delay: -2s;"></div>
+    
+    <!-- Spiral voids -->
+    <div class="spiral-void" style="top: 10%; right: 40%;"></div>
+    <div class="spiral-void" style="bottom: 10%; left: 30%; animation-delay: -1s;"></div>
+    
+    <!-- Dimension holes -->
+    <div class="dimension-hole" style="top: 50%; left: 80%;"></div>
+    <div class="dimension-hole" style="bottom: 60%; right: 60%; animation-delay: -1.2s;"></div>
+    <div class="dimension-hole" style="top: 30%; left: 5%; animation-delay: -0.6s;"></div>
+    
+    <script>
+        // Mouse trail of pure chaos
+        document.addEventListener('mousemove', (e) => {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    const trail = document.createElement('div');
+                    trail.className = 'cursor-trail';
+                    trail.style.left = e.clientX + Math.random() * 40 - 20 + 'px';
+                    trail.style.top = e.clientY + Math.random() * 40 - 20 + 'px';
+                    trail.style.background = `radial-gradient(circle, hsl(${Math.random() * 360}, 100%, 50%), transparent)`;
+                    document.body.appendChild(trail);
+                    
+                    setTimeout(() => trail.remove(), 500);
+                }, i * 20);
+            }
+        });
+        
+        // Random geometric chaos spawner
+        function spawnChaos() {
+            const chaos = document.createElement('div');
+            chaos.className = 'geometric-madness';
+            chaos.style.left = Math.random() * 100 + '%';
+            chaos.style.top = Math.random() * 100 + '%';
+            chaos.style.animationDelay = Math.random() * -2 + 's';
+            chaos.style.background = `linear-gradient(${Math.random() * 360}deg, 
+                transparent 30%, 
+                hsl(${Math.random() * 360}, 100%, 50%) 31%, 
+                hsl(${Math.random() * 360}, 100%, 50%) 69%, 
+                transparent 70%)`;
+            
+            document.body.appendChild(chaos);
+            
+            setTimeout(() => chaos.remove(), 5000);
+        }
+        
+        // Spawn reality tears
+        function spawnRealityTear() {
+            const tear = document.createElement('div');
+            tear.style.position = 'absolute';
+            tear.style.left = Math.random() * 100 + '%';
+            tear.style.top = Math.random() * 100 + '%';
+            tear.style.width = Math.random() * 200 + 50 + 'px';
+            tear.style.height = '5px';
+            tear.style.background = `linear-gradient(90deg, 
+                transparent, 
+                hsl(${Math.random() * 360}, 100%, 50%), 
+                transparent)`;
+            tear.style.transform = `rotate(${Math.random() * 360}deg)`;
+            tear.style.animation = 'glitchStorm 0.1s linear infinite';
+            
+            document.body.appendChild(tear);
+            setTimeout(() => tear.remove(), 2000);
+        }
+        
+        // Spawn floating words of madness
+        function spawnMadWord() {
+            const words = ['DISSOLVE', 'FRACTAL', 'DIMENSION', 'BREACH', 'ENTITY', 'PERCEPTION', 'INFINITE', 'VOID', 'MATRIX', 'GLITCH'];
+            const word = document.createElement('div');
+            word.className = 'floating-words';
+            word.textContent = words[Math.floor(Math.random() * words.length)];
+            word.style.left = Math.random() * 80 + 10 + '%';
+            word.style.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            word.style.animationDuration = Math.random() * 3 + 3 + 's';
+            word.style.fontSize = Math.random() * 3 + 1 + 'rem';
+            
+            document.body.appendChild(word);
+            setTimeout(() => word.remove(), 6000);
+        }
+        
+        // Spawn extra eyes that follow cursor
+        function spawnFollowingEye(x, y) {
+            const eye = document.createElement('div');
+            eye.className = 'eye-of-madness';
+            eye.style.left = x + 'px';
+            eye.style.top = y + 'px';
+            eye.style.position = 'absolute';
+            eye.style.zIndex = '1000';
+            
+            document.body.appendChild(eye);
+            setTimeout(() => eye.remove(), 3000);
+        }
+        
+        // Click spawns chaos
+        document.addEventListener('click', (e) => {
+            // Spawn multiple effects at once
+            spawnFollowingEye(e.clientX, e.clientY);
+            
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    spawnChaos();
+                    spawnRealityTear();
+                }, i * 100);
+            }
+            
+            // Screen flash
+            document.body.style.filter = 'invert(1) brightness(3) hue-rotate(180deg)';
+            setTimeout(() => {
+                document.body.style.filter = '';
+            }, 100);
+        });
+        
+        // Auto-spawn chaos regularly
+        setInterval(spawnChaos, 800);
+        setInterval(spawnRealityTear, 600);
+        setInterval(spawnMadWord, 1200);
+        
+        // Random screen distortions
+        setInterval(() => {
+            const distortions = [
+                'perspective(100px) rotateX(45deg)',
+                'perspective(200px) rotateY(-30deg)',
+                'scale(1.1) skew(5deg)',
+                'scale(0.9) rotate(2deg)',
+                'perspective(150px) rotateX(-20deg) rotateY(15deg)'
+            ];
+            
+            const randomDistortion = distortions[Math.floor(Math.random() * distortions.length)];
+            document.body.style.transform = randomDistortion;
+            
+            setTimeout(() => {
+                document.body.style.transform = '';
+            }, 200);
+        }, 2000);
+        
+        // Audio chaos (Web Audio API)
+        let audioContext = null;
+        
+        function initAudio() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+        
+        function playRandomTone() {
+            initAudio();
+            
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.value = Math.random() * 800 + 200;
+            oscillator.type = ['sine', 'square', 'sawtooth', 'triangle'][Math.floor(Math.random() * 4)];
+            
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.5);
+        }
+        
+        // Play random sounds
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                playRandomTone();
+            }
+        }, 500);
+        
+        // Keyboard triggers mega chaos
+        document.addEventListener('keydown', (e) => {
+            // Any key pressed triggers absolute madness
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    spawnChaos();
+                    spawnRealityTear();
+                    spawnMadWord();
+                    playRandomTone();
+                }, i * 20);
+            }
+            
+            // Screen seizure warning: intense flashing
+            document.body.style.animation = 'colorStorm 0.05s linear infinite, bodyWarp 0.1s ease-in-out infinite';
+            setTimeout(() => {
+                document.body.style.animation = 'bodyWarp 3s ease-in-out infinite, colorStorm 1.5s linear infinite, dimensionShift 8s ease-in-out infinite alternate';
+            }, 2000);
+        });
+        
+        // Reality collapse on long mouse hold
+        let mouseHoldTimer;
+        let isMouseDown = false;
+        
+        document.addEventListener('mousedown', () => {
+            isMouseDown = true;
+            mouseHoldTimer = setTimeout(() => {
+                if (isMouseDown) {
+                    // REALITY COLLAPSE
+                    document.body.style.animation = 'colorStorm 0.01s linear infinite';
+                    document.body.style.filter = 'invert(1) hue-rotate(180deg) blur(5px) brightness(5) contrast(10)';
+                    
+                    for (let i = 0; i < 200; i++) {
+                        setTimeout(() => {
+                            spawnChaos();
+                            spawnRealityTear();
+                            spawnMadWord();
+                            playRandomTone();
+                        }, i * 5);
+                    }
+                    
+                    setTimeout(() => {
+                        document.body.style.animation = 'bodyWarp 3s ease-in-out infinite, colorStorm 1.5s linear infinite, dimensionShift 8s ease-in-out infinite alternate';
+                        document.body.style.filter = '';
+                    }, 5000);
+                }
+            }, 3000);
+        });
+        
+        document.addEventListener('mouseup', () => {
+            isMouseDown = false;
+            clearTimeout(mouseHoldTimer);
+        });
+        
+        // Auto-intensify over time
+        let intensityLevel = 1;
+        setInterval(() => {
+            intensityLevel += 0.1;
+            
+            // Increase spawn rates
+            if (Math.random() > 0.5) spawnChaos();
+            if (Math.random() > 0.3) spawnRealityTear();
+            if (Math.random() > 0.7) spawnMadWord();
+            
+            // Eventually break reality completely
+            if (intensityLevel > 10) {
+                document.body.style.filter = 'hue-rotate(' + (Date.now() * 0.1) + 'deg) saturate(10) brightness(2)';
+            }
+        }, 5000);
+        
+        // Initialize the madness
+        setTimeout(() => {
+            initAudio();
+        }, 1000);
+    </script>
+</body>
+</html>
